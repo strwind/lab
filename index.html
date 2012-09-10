@@ -131,8 +131,8 @@ var snake = {
         }
         
         if(this.config.gameOver){
-            alert("game over");
             clearTimeout(this.timer);
+            alert("game over");
             location.reload();
         }
 
