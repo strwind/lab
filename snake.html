@@ -132,6 +132,7 @@ var snake = {
         
         if(this.config.gameOver){
             alert("game over");
+            clearTimeout(this.timer);
             location.reload();
         }
 
@@ -195,7 +196,7 @@ var snake = {
         that.bindEvent();
         that.createFood(0);
 
-        setInterval( function(){that.next();}, 1000/that.config.fps );
+        that.timer = setInterval( function(){that.next();}, 1000/that.config.fps );
 
     }
 }
