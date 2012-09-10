@@ -34,6 +34,7 @@ var snake = {
     
     //重画canvas
     draw : function(){
+        if(this.config.gameOver) return;
         this.ctx.clearRect(0,0,this.config.width*this.config.pixel,this.config.height*this.config.pixel);
         var length = this.position.length;
         //画蛇
